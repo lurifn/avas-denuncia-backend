@@ -1,5 +1,5 @@
 # AVAS - Auxílio a Vítimas de Assédio Sexual
-Denúncia - backend
+_Denúncia - backend_
 
 AVAS - Auxílio a Vítimas de Assédio Sexual será uma plataforma que armazenará denúncias de situações de assédio ocorridas em eventos universitários e oferecerá auxílio as vítimas, caso assim desejem.
 
@@ -7,86 +7,87 @@ De cada denúncia, esperamos as seguintes possibilidades:
 - Ao informar o horário e local onde ocorreu o assédio, a vítima pode ajudar a organização do evento a melhorar a monitoração;
 - Ao informar quem foi o agressor uma advogada que esteja conduzindo um caso contra o mesmo indivíduo pode utilizar as informações fornecidas para fortalecer o caso.
 
-## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Começando
 
-### Prerequisites
+Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Consulte implantação para obter notas sobre como implantar o projeto em um sistema ativo.
 
-What things you need to install the software and how to install them
+### Pré-requisitos
 
-```
-Give examples
-```
+O que você precisa para instalar o software e como instalá-lo
 
-### Installing
+`` ``
+Dar exemplos
+`` ``
 
-A step by step series of examples that tell you how to get a development env running
+### Instalando
 
-Say what the step will be
+Uma série de exemplos passo a passo que mostram como obter um ambiente de desenvolvimento em execução
 
-```
-Give the example
-```
+Diga qual será o passo
 
-And repeat
+`` ``
+Dê o exemplo
+`` ``
 
-```
-until finished
-```
+E repita
 
-End with an example of getting some data out of the system or using it for a little demo
+`` ``
+até terminar
+`` ``
 
-## Running the tests
+Termine com um exemplo de como retirar alguns dados do sistema ou usá-los para uma pequena demonstração
 
-Explain how to run the automated tests for this system
+## Executando os testes
 
-### Break down into end to end tests
+Explique como executar os testes automatizados para este sistema
 
-Explain what these tests test and why
+### Divida em testes de ponta a ponta
 
-```
-Give an example
-```
+Explique o que esses testes testam e por que
 
-### And coding style tests
+`` ``
+Dê um exemplo
+`` ``
 
-Explain what these tests test and why
+### E testes de estilo de codificação
 
-```
-Give an example
-```
+Explique o que esses testes testam e por que
 
-## Deployment
+`` ``
+Dê um exemplo
+`` ``
 
-Add additional notes about how to deploy this on a live system
+## Desdobramento, desenvolvimento
 
-## Built With
+Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+## Construído com
 
-## Contributing
+* [Dropwizard] (http://www.dropwizard.io/1.0.2/docs/) - A estrutura da web usada
+* [Maven] (https://maven.apache.org/) - Gerenciamento de dependências
+* [ROMA] (https://rometools.github.io/rome/) - Usado para gerar feeds RSS
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+## Contribuindo
 
-## Versioning
+Leia [CONTRIBUTING.md] (https://gist.github.com/PurpleBooth/b24679402957c63ec426) para obter detalhes sobre nosso código de conduta e o processo para enviar solicitações pull para nós.
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+## Controle de versão
 
-## Authors
+Usamos [SemVer] (http://semver.org/) para versionar. Para as versões disponíveis, consulte as [tags neste repositório] (https://github.com/your/project/tags).
 
-* **Luana Nascimento** - *Initial work* - [LuanaFn](https://github.com/LuanaFn)
+## Autores
 
-See also the list of [contributors](https://github.com/LuanaFn/avas-denuncia-backend/contributors) who participated in this project.
+* ** Luana Nascimento ** - * Trabalho inicial * - [LuanaFn] (https://github.com/LuanaFn)
 
-## License
+Veja também a lista de [colaboradores] (https://github.com/LuanaFn/avas-denuncia-backend/contributors) que participaram deste projeto.
 
-This project is licensed under the GNU License - see the [LICENSE.md](LICENSE.md) file for details
+## Licença
 
-## Acknowledgments
+Este projeto está licenciado sob a GNU License - consulte o arquivo [LICENSE.md] (LICENSE.md) para obter detalhes
 
-* Hat tip to anyone whose code was used
-* Inspiration
+## Agradecimentos
+
+* Gorjeta para qualquer pessoa cujo código foi usado
+* Inspiração
 * etc
