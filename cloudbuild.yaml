@@ -1,0 +1,6 @@
+# Instala a aplicação
+
+steps:
+  # Demonstrate using the maven image directly.
+  - name: 'maven'
+    args: ['mvn', 'install']
