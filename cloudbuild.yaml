@@ -3,17 +3,25 @@
 steps:
   # Demonstrate using the maven image directly.
   - name: 'maven'
-    id: 'clean'
-    args: ['mvn', 'clean']
-  - name: 'maven'
-    id: 'test'
-    args: ['mvn', 'test']
-  - name: 'maven'
     id: 'install'
-    args: ['mvn', 'install']
+    args: ['mvn', 'clean', 'install']
   - name: 'docker'
     id: 'docker build'
-    args: ['build', 'Dockerfile']
+    args: ['build', '-t', 'luanafn/avas-denuncia-backend:$SHORT_SHA', '.']
   - name: 'docker'
     id: 'docker run'
     args: ['run']
+  - name: 'docker'
+    id: Push
+    args:
+      - 'push'
+      - 'luanafn/avas-denuncia-backend:$SHORT_SHA'
+  - name: 'gcr.io/cloud-builders/kubectl'
+    id: Deploy
+    args:
+      - 'apply'
+      - '-f'
+      - 'kubernetes.yaml'
+    env:
+      - 'CLOUDSDK_COMPUTE_ZONE=southamerica-east1-a'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=denuncia-backend'
