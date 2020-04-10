@@ -2,13 +2,18 @@
 
 steps:
   # Demonstrate using the maven image directly.
-  - name: 'clean'
+  - name: 'maven'
+    id: 'clean'
     args: ['mvn', 'clean']
-  - name: 'test'
+  - name: 'maven'
+    id: 'test'
     args: ['mvn', 'test']
-  - name: 'install'
+  - name: 'maven'
+    id: 'install'
     args: ['mvn', 'install']
-  - name: 'docker build'
-    args: ['docker', 'build', 'Dockerfile']
-  - name: 'docker run'
-    args: ['docker', 'run']
+  - name: 'docker'
+    id: 'docker build'
+    args: ['build', 'Dockerfile']
+  - name: 'docker'
+    id: 'docker run'
+    args: ['run']
