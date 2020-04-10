@@ -9,9 +9,6 @@ steps:
     id: 'docker build'
     args: ['build', '-t', 'luanafn/avas-denuncia-backend:$SHORT_SHA', '.']
   - name: 'docker'
-    id: 'docker run'
-    args: ['run']
-  - name: 'docker'
     id: Push
     args:
       - 'push'
