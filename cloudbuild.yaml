@@ -7,7 +7,7 @@ steps:
     args: ['mvn', 'clean', 'install']
   - name: 'maven'
     id: 'mvnDeploy'
-    args: ['mvn', 'deploy', '-Dregistry=https://maven.pkg.github.com/LuanaFn', '-Dtoken=GH_TOKEN', '-X']
+    args: ['mvn', 'deploy', '-Dregistry=https://maven.pkg.github.com/LuanaFn', '-Dtoken=GH_TOKEN']
   - name: 'docker'
     id: 'docker build'
     args: ['build', '-t', 'luanafn/avas-denuncia-backend:latest', '.']
