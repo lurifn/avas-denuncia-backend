@@ -19,5 +19,6 @@ RUN apt-get update && \
 RUN git clone ${git_url} && \
     cd avas-denuncia-backend && \
     git checkout ${branch} && \
-    mvn clean install && \
-    java -jar target/avas-denuncia.jar
+    mvn clean install
+
+ENTRYPOINT java -jar target/avas-denuncia.jar
