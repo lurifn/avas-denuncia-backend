@@ -24,7 +24,9 @@ jobs:
       - name: Install
         run: mvn clean install
 
-      - name: GitHub Docker Action
-        uses: matootie/github-docker@v2.2.3
+      - name: Dockerize
+        uses: manusa/actions-publish-docker@master
         with:
-          accessToken: ${{ secrets.GITHUB_TOKEN }}
+          name: luanafn/avas-denuncia-backend
+          username: ${{ secrets.DOCKER_HUB_USER }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}

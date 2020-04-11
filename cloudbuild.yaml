@@ -5,7 +5,7 @@ steps:
     id: PullTest
     args:
       - 'pull'
-      - 'docker.pkg.github.com/luanafn/avas-denuncia-backend'
+      - 'luanafn/avas-denuncia-backend'
   - name: 'gcr.io/cloud-builders/kubectl'
     id: Deploy
     args:
