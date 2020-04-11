@@ -29,6 +29,9 @@ steps:
       - '--dry-run'
       - '-o=yaml'
       - '>kubernetes.yaml'
+    env:
+      - 'CLOUDSDK_COMPUTE_ZONE=southamerica-east1-a'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=denuncia-backend'
   - name: 'gcr.io/cloud-builders/kubectl'
     id: Deploy
     args:
