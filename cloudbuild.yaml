@@ -7,7 +7,7 @@ steps:
     args: ['mvn', 'clean', 'install']
   - name: 'docker'
     id: 'docker build'
-    args: ['build', '-t', 'luanafn/avas-denuncia-backend:$SHORT_SHA', '.']
+    args: ['build', '-t', 'luanafn/avas-denuncia-backend:latest', '.']
   - name: 'docker'
     id: login
     args:
