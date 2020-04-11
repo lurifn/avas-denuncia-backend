@@ -3,7 +3,7 @@
 steps:
   - name: 'docker'
     id: 'docker build'
-    args: ['build', '--build-arg', 'branch=$_BASE_BRANCH', '-t', 'luanafn/avas-denuncia-backend:latest', '.']
+    args: ['build', '--build-arg', 'branch=$BRANCH_NAME', '-t', 'luanafn/avas-denuncia-backend:latest', '.']
   - name: 'docker'
     id: login
     args:
