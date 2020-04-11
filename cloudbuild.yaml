@@ -7,7 +7,7 @@ steps:
     args: ['mvn', 'clean', 'install']
   - name: 'docker'
     id: 'docker build'
-    args: ['build', '-t', 'luanafn/avas-denuncia-backend:latest', '.']
+    args: ['build', '-t', 'luanafn/avas-denuncia-backend:$SHORT_SHA', '.']
   - name: 'docker'
     id: login
     args:
@@ -18,12 +18,12 @@ steps:
     id: Push
     args:
       - 'push'
-      - 'luanafn/avas-denuncia-backend:latest'
+      - 'luanafn/avas-denuncia-backend:$SHORT_SHA'
   - name: 'docker'
     id: PullTest
     args:
       - 'pull'
-      - 'luanafn/avas-denuncia-backend'
+      - 'luanafn/avas-denuncia-backend:$SHORT_SHA'
   - name: 'gcr.io/cloud-builders/kubectl'
     id: Deploy
     args:
@@ -33,3 +33,4 @@ steps:
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=southamerica-east1-a'
       - 'CLOUDSDK_CONTAINER_CLUSTER=denuncia-backend'
+      - 'IMAGE_VERSION=$SHORT_SHA'
