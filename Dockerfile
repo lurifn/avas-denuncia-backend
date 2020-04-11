@@ -21,4 +21,4 @@ RUN git clone ${git_url} && \
     git checkout ${branch} && \
     mvn clean install
 
-ENTRYPOINT java -jar target/avas-denuncia.jar
+ENTRYPOINT java -jar avas-denuncia-backend/target/avas-denuncia.jar
