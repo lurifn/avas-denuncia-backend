@@ -89,6 +89,16 @@
     </dependencyManagement>
 
     <distributionManagement>
+        <snapshotRepository>
+            <id>avas-denuncia-backend</id>
+            <name>AVAS - Auxílio a Vítimas de Assédio Sexual</name>
+            <url>https://github.com/LuanaFn/avas-denuncia-backend.git</url>
+        </snapshotRepository>
+        <repository>
+            <id>avas-denuncia-backend</id>
+            <name>AVAS - Auxílio a Vítimas de Assédio Sexual</name>
+            <url>https://github.com/LuanaFn/avas-denuncia-backend.git</url>
+        </repository>
         <site>
             <id>github-project-site</id>
             <name>GitHub Project Pages</name>
