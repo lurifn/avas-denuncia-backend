@@ -1,32 +1,11 @@
 # Instala a aplicação
 
 steps:
-  # Demonstrate using the maven image directly.
-  - name: 'maven'
-    id: 'install'
-    args: ['mvn', 'clean', 'install']
-  - name: 'maven'
-    id: 'mvnDeploy'
-    args: ['mvn', 'deploy', '-Dregistry=https://maven.pkg.github.com/LuanaFn', '-Dtoken=GH_TOKEN']
-  - name: 'docker'
-    id: 'docker build'
-    args: ['build', '-t', 'luanafn/avas-denuncia-backend:latest', '.']
-  - name: 'docker'
-    id: login
-    args:
-      - 'login'
-      - '--username=${_DOCKERHUB_LOGIN}'
-      - '--password=${_DOCKERHUB_PASS}'
-  - name: 'docker'
-    id: Push
-    args:
-      - 'push'
-      - 'luanafn/avas-denuncia-backend:latest'
   - name: 'docker'
     id: PullTest
     args:
       - 'pull'
-      - 'luanafn/avas-denuncia-backend'
+      - 'docker.pkg.github.com/luanafn/avas-denuncia-backend'
   - name: 'gcr.io/cloud-builders/kubectl'
     id: Deploy
     args:

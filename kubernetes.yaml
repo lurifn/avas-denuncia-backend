@@ -18,7 +18,7 @@ spec:
         app: dep-dev
     spec:
       containers:
-      - image: luanafn/avas-denuncia-backend:latest
+      - image: docker.pkg.github.com/luanafn/avas-denuncia-backend:latest
         name: avas-denuncia-backend
         resources: {}
 status: {}
