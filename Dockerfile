@@ -1,5 +1,5 @@
 # use java 11
-FROM adoptopenjdk/openjdk11:alpine-jre
+FROM adoptopenjdk/maven-openjdk11
 
 #Info
 LABEL maintainer="lluana13@hotmail.com"
@@ -7,10 +7,17 @@ LABEL maintainer="lluana13@hotmail.com"
 # open port 8080
 EXPOSE 8080
 
-ARG JAR_FILE=target/avas-denuncia.jar
-ARG DEPENDENCY=target/dependency
+ARG git_url=https://github.com/LuanaFn/avas-denuncia-backend.git
+ARG branch=master
 
 WORKDIR /opt/app
 
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git
+
+RUN git clone ${git_url} && \
+    cd avas-denuncia-backend && \
+    git checkout ${branch} && \
+    mvn clean install && \
+    java -jar target/avas-denuncia.jar
