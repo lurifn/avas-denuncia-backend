@@ -20,19 +20,6 @@ steps:
       - 'push'
       - 'luanafn/avas-denuncia-backend:$SHORT_SHA'
   - name: 'gcr.io/cloud-builders/kubectl'
-    id: kubecongif
-    args:
-      - 'create'
-      - 'deployment'
-      - 'demo'
-      - '--image=luanafn/avas-denuncia-backend'
-      - '--dry-run'
-      - '-o=yaml'
-      - '>kubernetes.yaml'
-    env:
-      - 'CLOUDSDK_COMPUTE_ZONE=southamerica-east1-a'
-      - 'CLOUDSDK_CONTAINER_CLUSTER=denuncia-backend'
-  - name: 'gcr.io/cloud-builders/kubectl'
     id: Deploy
     args:
       - 'apply'
