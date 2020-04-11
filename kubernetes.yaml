@@ -18,7 +18,7 @@ spec:
         app: dep-dev
     spec:
       containers:
-      - image: luanafn/avas-denuncia-backend:{{IMAGE_VERSION}}
+      - image: luanafn/avas-denuncia-backend:latest
         name: avas-denuncia-backend
         resources: {}
 status: {}
