@@ -28,3 +28,4 @@ jobs:
         uses: matootie/github-docker@v2.2.3
         with:
           accessToken: ${{ secrets.GITHUB_TOKEN }}
+          repositoryName: luanafn/avas-denuncia-backend
