@@ -12,8 +12,8 @@ steps:
     id: login
     args:
       - 'login'
-      - '-u="${_DOCKERHUB_LOGIN}"'
-      - '-p="${_DOCKERHUB_PASS}"'
+      - '--username=${_DOCKERHUB_LOGIN}'
+      - '--password=${_DOCKERHUB_PASS}'
   - name: 'docker'
     id: Push
     args:
