@@ -19,6 +19,11 @@ steps:
     args:
       - 'push'
       - 'luanafn/avas-denuncia-backend:$SHORT_SHA'
+  - name: 'docker'
+    id: PullTest
+    args:
+      - 'pull'
+      - 'luanafn/avas-denuncia-backend'
   - name: 'gcr.io/cloud-builders/kubectl'
     id: Deploy
     args:
