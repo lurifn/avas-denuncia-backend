@@ -18,7 +18,7 @@ steps:
     id: Push
     args:
       - 'push'
-      - 'luanafn/avas-denuncia-backend:$SHORT_SHA'
+      - 'luanafn/avas-denuncia-backend:latest'
   - name: 'docker'
     id: PullTest
     args:
