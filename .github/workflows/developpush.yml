@@ -41,6 +41,5 @@ jobs:
           name: luanafn/avas-denuncia-backend
           username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-          buildargs: branch=develop
+          #buildargs: branch=develop
           tags: ${{ env.GITHUB_REF_SLUG }}
-          dockerfile: Dockerfile
