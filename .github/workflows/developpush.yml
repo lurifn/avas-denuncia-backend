@@ -24,6 +24,17 @@ jobs:
       - name: Install
         run: mvn clean install
 
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rlespinasse/github-slug-action@master
+      - name: Print slug variables
+        run: |
+          echo ${{ env.GITHUB_REF_SLUG }}
+          echo ${{ env.GITHUB_HEAD_REF_SLUG }}
+          echo ${{ env.GITHUB_BASE_REF_SLUG }}
+          echo ${{ env.GITHUB_SHA_SHORT }}
+
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
@@ -31,4 +42,4 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
           buildargs: branch=develop
-          tags: ${{ github.reF }}
+          tags: ${{ env.GITHUB_REF_SLUG }}
