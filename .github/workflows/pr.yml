@@ -5,6 +5,19 @@ on:
     types: closed
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verifica PR
+        uses: "tayfun/flake8-your-pr@master"
+        secrets: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check out code.
+        uses: actions/checkout@v1
+      - name: misspell
+        uses: reviewdog/action-misspell@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          locale: "BR"
   build:
     runs-on: ubuntu-latest
     steps:
