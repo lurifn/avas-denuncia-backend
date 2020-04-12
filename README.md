@@ -14,53 +14,34 @@ Essas instruções fornecerão uma cópia do projeto em execução na sua máqui
 
 ### Pré-requisitos
 
-O que você precisa para instalar o software e como instalá-lo
-
-`` ``
-Dar exemplos
-`` ``
+O que você precisa para instalar o software e como instalá-lo:
+1. Java 1.7+
+2. Maven/Gradle
 
 ### Instalando
 
-Uma série de exemplos passo a passo que mostram como obter um ambiente de desenvolvimento em execução
+Para instalar um client da API execute os seguintes comandos:
 
-Diga qual será o passo
+```shell
+mvn clean install
+java -jar target/avas-denuncia.jar
+```
 
-`` ``
-Dê o exemplo
-`` ``
+Para fazer deploy em um repositório remoto, configure os settings da aplicação e execute:
 
-E repita
-
-`` ``
-até terminar
-`` ``
-
-Termine com um exemplo de como retirar alguns dados do sistema ou usá-los para uma pequena demonstração
+```shell
+mvn clean deploy
+```
 
 ## Executando os testes
 
-Explique como executar os testes automatizados para este sistema
+Para rodar os testes unitários execute:
+```shell script
+mvn test
+```
 
-### Divida em testes de ponta a ponta
-
-Explique o que esses testes testam e por que
-
-`` ``
-Dê um exemplo
-`` ``
-
-### E testes de estilo de codificação
-
-Explique o que esses testes testam e por que
-
-`` ``
-Dê um exemplo
-`` ``
-
-## Desdobramento, desenvolvimento
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
+## Documentação dos endpoints da API
+Para uma documentação detalhada dos endpoints da API, consulte o [wiki do repositório](https://github.com/LuanaFn/avas-denuncia-backend/wiki/).
 
 ## Construído com
 
@@ -84,10 +65,4 @@ Veja também a lista de [colaboradores] (https://github.com/LuanaFn/avas-denunci
 
 ## Licença
 
-Este projeto está licenciado sob a GNU License - consulte o arquivo [LICENSE.md] (LICENSE.md) para obter detalhes
-
-## Agradecimentos
-
-* Gorjeta para qualquer pessoa cujo código foi usado
-* Inspiração
-* etc
+Este projeto está licenciado sob a GNU GPL - consulte o arquivo [LICENSE.md] (LICENSE.md) para obter detalhes

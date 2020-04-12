@@ -76,25 +76,6 @@
         </dependency>
     </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>avas-denuncia-backend</name>
-            <url>https://github.com/LuanaFn/avas-denuncia-backend</url>
-        </repository>
-    </distributionManagement>
     <build>
         <finalName>avas-denuncia</finalName>
         <plugins>
