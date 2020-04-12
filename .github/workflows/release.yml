@@ -1,0 +1,50 @@
+on:
+  release:
+    types: [created]
+name: Handle Release
+jobs:
+  gitpackage:
+    name: Publish on github package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish on Github Package
+        uses: matootie/github-docker@v2.2.2
+        with:
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
+
+  image:
+    name: Publish tar image to github release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Save the image
+        uses: actions/docker/cli@master
+        with:
+          args: save avas-denuncia-backend:latest
+
+      - name:  docker image to release
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: avas-denuncia-backend.tar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  jar:
+    name: Publish jar to release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+          server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+          settings-path: ${{ github.workspace }} # location for the settings.xml file
+
+      - name: Generate jar file
+        run: mvn clean install -DskipTests
+
+      - name:  publish jar to release
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: target/avas-denuncia.jar application/java-archive
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
