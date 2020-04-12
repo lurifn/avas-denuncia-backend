@@ -24,12 +24,6 @@ jobs:
       - name: Install
         run: mvn clean install
 
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Secret Scan
-        uses: max/secret-scan@1.0.0
-
   publish:
     runs-on: ubuntu-latest
     steps:
