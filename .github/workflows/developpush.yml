@@ -43,3 +43,11 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
           buildargs: branch=${{ env.GITHUB_REF_SLUG }}
+
+      - name: Deploy on heroku
+        uses: akhileshns/heroku-deploy@v3.0.2 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "avas-denuncia-backend"
+          heroku_email: "lluana13@hotmail.com"
+          usedocker: true
