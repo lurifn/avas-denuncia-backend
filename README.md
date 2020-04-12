@@ -70,7 +70,7 @@ Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
 ## Contribuindo
 
-Leia [CONTRIBUTING.md] (https://gist.github.com/PurpleBooth/b24679402957c63ec426) para obter detalhes sobre nosso código de conduta e o processo para enviar solicitações pull para nós.
+Leia [CONTRIBUTING.md] (CONTRIBUTING.md) para obter detalhes sobre nosso código de conduta e o processo para enviar solicitações pull para nós.
 
 ## Controle de versão
 
