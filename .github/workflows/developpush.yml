@@ -24,6 +24,9 @@ jobs:
       - name: Install
         run: mvn clean install
 
+  publish:
+    runs-on: ubuntu-latest
+    steps:
       - uses: rlespinasse/github-slug-action@master
       - name: Print slug variables
         run: |
@@ -32,11 +35,11 @@ jobs:
           echo ${{ env.GITHUB_BASE_REF_SLUG }}
           echo ${{ env.GITHUB_SHA_SHORT }}
 
+      - uses: actions/checkout@v2
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: luanafn/avas-denuncia-backend
           username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-          #buildargs: branch=develop
-          #tags: ${{ env.GITHUB_REF_SLUG }}
+          buildargs: branch=${{ env.GITHUB_REF_SLUG }}
