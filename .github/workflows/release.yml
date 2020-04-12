@@ -48,3 +48,13 @@ jobs:
           args: target/avas-denuncia.jar application/java-archive
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  dockerhub:
+    name: Publish release to dockerhub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: luanafn/avas-denuncia-backend
+          username: ${{ secrets.DOCKER_HUB_USER }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
