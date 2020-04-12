@@ -23,3 +23,17 @@ jobs:
 
       - name: Install
         run: mvn clean install
+
+      - name: Upload to release
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: target/avas-denuncia.jar application/java-archive
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: myDocker/repository
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
