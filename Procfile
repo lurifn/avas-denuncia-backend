@@ -1,1 +1,1 @@
-web: java -Dserver.port=80 -jar target/avas-denuncia.jar
+web: java -Dserver.port=$PORT -jar target/avas-denuncia.jar
