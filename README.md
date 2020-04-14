@@ -40,14 +40,19 @@ Para rodar os testes unitários execute:
 mvn test
 ```
 
+## Deploy
+O deploy em [ambiente dev](https://avas-denuncia-backend.herokuapp.com/) é feito automaticamente ao fazer merge com a [branch develop](https://github.com/LuanaFn/avas-denuncia-backend/tree/develop).
+O deploy em ambiente de homologação e produção será feito no [GKE](https://cloud.google.com/kubernetes-engine) e ainda não está completamente configurado.
+
 ## Documentação dos endpoints da API
 Para uma documentação detalhada dos endpoints da API, consulte o [wiki do repositório](https://github.com/LuanaFn/avas-denuncia-backend/wiki/).
 
 ## Construído com
 
-* [Dropwizard] (http://www.dropwizard.io/1.0.2/docs/) - A estrutura da web usada
-* [Maven] (https://maven.apache.org/) - Gerenciamento de dependências
-* [ROMA] (https://rometools.github.io/rome/) - Usado para gerar feeds RSS
+* [SemVer](https://semver.org/) - Estrutura de versionamento
+* [Hexagonal architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software) - Arquitetura dos arquivos da aplicação
+* [Maven](https://maven.apache.org/) - Gerenciamento de dependências
+* [Spring boot](https://spring.io/projects/spring-boot) - Framework para aplicações Java
 
 ## Contribuindo
 
@@ -55,14 +60,14 @@ Leia [CONTRIBUTING.md] (CONTRIBUTING.md) para obter detalhes sobre nosso código
 
 ## Controle de versão
 
-Usamos [SemVer] (http://semver.org/) para versionar. Para as versões disponíveis, consulte as [tags neste repositório] (https://github.com/your/project/tags).
+Usamos [SemVer] (http://semver.org/) para versionar. Para as versões disponíveis, consulte as [tags neste repositório](https://github.com/your/project/tags).
 
 ## Autores
 
-* ** Luana Nascimento ** - * Trabalho inicial * - [LuanaFn] (https://github.com/LuanaFn)
+* **Luana Nascimento** - *Trabalho inicial* - [LuanaFn] (https://github.com/LuanaFn)
 
-Veja também a lista de [colaboradores] (https://github.com/LuanaFn/avas-denuncia-backend/contributors) que participaram deste projeto.
+Veja também a lista de [colaboradores](https://github.com/LuanaFn/avas-denuncia-backend/contributors) que participaram deste projeto.
 
 ## Licença
 
-Este projeto está licenciado sob a GNU GPL - consulte o arquivo [LICENSE.md] (LICENSE.md) para obter detalhes
+Este projeto está licenciado sob a GNU GPL - consulte o arquivo [LICENSE.md](LICENSE.md) para obter detalhes
