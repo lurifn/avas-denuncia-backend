@@ -25,7 +25,6 @@ dump.rdb
 interpolated*.xml
 lib/
 manifest.yml
-out
 overridedb.*
 target
 transaction-logs
